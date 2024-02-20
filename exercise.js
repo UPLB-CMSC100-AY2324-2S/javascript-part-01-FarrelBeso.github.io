@@ -2,7 +2,7 @@ const strMatch = (pass1, pass2) => {
     return (pass1 === pass2);
 }
 
-const lengthCheck = (pass) => {
+const isCorrectLength = (pass) => {
     return (pass.length >= 8);
 }
 
@@ -25,5 +25,11 @@ const containsLower = (pass) => {
 }
 
 const validatePassword = (pass1, pass2) => {
-
+    return (
+        strMatch(pass1, pass2) &&
+        isCorrectLength(pass1) && isCorrectLength(pass2) &&
+        containsNum(pass1) && containsNum(pass2) &&
+        containsUpper(pass1) && containsUpper(pass2) &&
+        containsLower(pass1) && containsLower(pass2)
+    );
 }
