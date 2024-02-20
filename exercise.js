@@ -33,3 +33,9 @@ const validatePassword = (pass1, pass2) => {
         containsLower(pass1) && containsLower(pass2)
     );
 }
+
+console.log(validatePassword("helloworld", "hello"))
+console.log(validatePassword("hello", "hello"))
+console.log(validatePassword("hello1234", "hello1234"))
+console.log(validatePassword("Hello1234", "Hello1234"))
+console.log(validatePassword("HELLO1234", "HELLO1234"))
