@@ -34,6 +34,14 @@ const validatePassword = (pass1, pass2) => {
     );
 }
 
+const reversePassword = (pass) => {
+    let strbuff = '';
+    for (let i=pass.length-1; i<=0; i--) {
+        strbuff += pass[i];
+    }
+    return strbuff;
+}
+
 console.log(validatePassword("helloworld", "hello"))
 console.log(validatePassword("hello", "hello"))
 console.log(validatePassword("hello1234", "hello1234"))
