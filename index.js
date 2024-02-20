@@ -55,13 +55,15 @@ const storePassword = (name, pass1, pass2) => {
 
 const processPassword = (event) => {
     event.preventDefault();
-    const name = document.getElementById('name');
-    const pass1 = document.getElementById('pass1');
-    const pass2 = document.getElementById('pass2');
-    const store = storePassword(name, pass1, pass2);
-    document.getElementById('output').innerText = store
+    const name = document.getElementById('name').value;
+    const pass1 = document.getElementById('pass1').value;
+    const pass2 = document.getElementById('pass2').value;
+    const passobj = storePassword(name, pass1, pass2);
+    const outstr = `Name: ${passobj.name}; New Password: ${passobj.newpassword}`;
+    document.getElementById('output').innerHTML = outstr;
+    console.log(name, pass1, pass2);
 }
 
 // append to the form
-const form = document.getElementById('form');
+var form = document.getElementById('form');
 form.addEventListener('submit', processPassword);
