@@ -42,6 +42,17 @@ const reversePassword = (pass) => {
     return strbuff;
 }
 
+const storePassword = (name, pass1, pass2) => {
+    let passObj = {
+        "name": name,
+        "newpassword": pass1
+    };
+    if (validatePassword(pass1, pass2)) {
+        passObj.newpassword = reversePassword(pass1);
+    }
+    return passObj;
+}
+
 console.log("Validate Password Test:")
 console.log(validatePassword("helloworld", "hello"))
 console.log(validatePassword("hello", "hello"))
