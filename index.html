@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./index.js"></script>
     <title>Password Validation</title>
 </head>
 <body>
-    <form>
+    <form id="form">
         <label for="name">Name:</label>
-        <input type="text" name="name">
+        <input type="text" name="name" id="name">
         <label for="pass1">First Password:</label>
-        <input type="text" name="pass1">
+        <input type="text" name="pass1" id="pass1">
         <label for="pass2">Second Password:</label>
-        <input type="text" name="pass2">
+        <input type="text" name="pass2" id="pass2">
+        <input type="submit" value="Submit" onclick="storePassword()">
     </form>
+    <p id="output"></p>
 </body>
 </html>

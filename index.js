@@ -53,26 +53,15 @@ const storePassword = (name, pass1, pass2) => {
     return passObj;
 }
 
-// console.log("\nValidate Password Test:")
-// console.log(validatePassword("helloworld", "hello"))
-// console.log("Expects: false")
-// console.log(validatePassword("hello", "hello"))
-// console.log("Expects: false")
-// console.log(validatePassword("hello1234", "hello1234"))
-// console.log("Expects: false")
-// console.log(validatePassword("Hello1234", "Hello1234"))
-// console.log("Expects: true")
-// console.log(validatePassword("HELLO1234", "HELLO1234"))
-// console.log("Expects: false")
+const processPassword = (event) => {
+    event.preventDefault();
+    const name = document.getElementById('name');
+    const pass1 = document.getElementById('pass1');
+    const pass2 = document.getElementById('pass2');
+    const store = storePassword(name, pass1, pass2);
+    document.getElementById('output').innerText = store
+}
 
-// console.log("\nPassword Reversal Test:")
-// console.log(reversePassword("Hello1234"))
-// console.log("Expects: 4321olleH")
-// console.log(reversePassword("Pass1234"))
-// console.log("Expects: 4321ssaP")
-
-// console.log("\nStore Password Test:")
-// console.log(storePassword("John", "Pass1234", "Pass1234"))
-// console.log("Expects: {name: \"John\", newpassword:\"4321ssaP\"}")
-// console.log(storePassword("John", "Pass123", "Pass12345"))
-// console.log("Expects: {name: \"John\", newpassword:\"Pass123\"}")
+// append to the form
+const form = document.getElementById('form');
+form.addEventListener('submit', processPassword);
