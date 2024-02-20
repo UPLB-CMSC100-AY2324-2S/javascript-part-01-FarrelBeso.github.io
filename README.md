@@ -14,3 +14,5 @@
 ### ```reversePassword(pass)``` takes a string password and returns a reversed version of it.
 
 ### ```storePassword(name, pass1, pass2)``` takes strings name, pass1, and pass2. Returns an object with the keys name and newpassword. If both passwords match, then the newpassword is the reversed version of the original password, otherwise, newpassword is equal to pass1.
+
+### Additionally, you could visit the website from the following link: https://uplb-cmsc100-ay2324-2s.github.io/javascript-part-01-FarrelBeso.github.io/
