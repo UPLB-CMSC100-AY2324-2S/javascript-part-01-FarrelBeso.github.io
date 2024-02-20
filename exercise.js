@@ -36,14 +36,18 @@ const validatePassword = (pass1, pass2) => {
 
 const reversePassword = (pass) => {
     let strbuff = '';
-    for (let i=pass.length-1; i<=0; i--) {
+    for (let i=pass.length-1; i>=0; i--) {
         strbuff += pass[i];
     }
     return strbuff;
 }
 
+console.log("Validate Password Test:")
 console.log(validatePassword("helloworld", "hello"))
 console.log(validatePassword("hello", "hello"))
 console.log(validatePassword("hello1234", "hello1234"))
 console.log(validatePassword("Hello1234", "Hello1234"))
 console.log(validatePassword("HELLO1234", "HELLO1234"))
+console.log("Password Reversal Test:")
+console.log(reversePassword("Hello1234"))
+console.log(reversePassword("Pass1234"))
